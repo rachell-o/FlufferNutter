@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 public class ButtonForCursor : MonoBehaviour
 {
+    [SerializeField] AudioClip _clicSound;
     [SerializeField] UnityEvent _even;
     [SerializeField] Sprite _highlightedSprite;
     Sprite _normalSprite;
@@ -31,6 +32,7 @@ public class ButtonForCursor : MonoBehaviour
     public void TriggerEvent()
     {
         Debug.Log("Je suis Triggered!");
+        SoundManager.instance.PlaySound(_clicSound);
         _even.Invoke();
     }
 }
