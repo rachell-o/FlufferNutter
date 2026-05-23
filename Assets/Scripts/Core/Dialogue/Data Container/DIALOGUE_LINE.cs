@@ -6,8 +6,6 @@ namespace DIALOGUE
 {
     public class DIALOGUE_LINE
     {
-
-
         public string speaker;
         public string dialogue;
         public string commands;

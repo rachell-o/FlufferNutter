@@ -8,24 +8,28 @@ namespace TESTING
     public class TestParsing : MonoBehaviour
     {
         [SerializeField] private TextAsset file;
+        private List<string> _lines = new();
+        public List<string> Lines => _lines;
+        private List<DIALOGUE_LINE> _dlList = new();
+        public List<DIALOGUE_LINE> DlList => _dlList;
+        int _textFileCounter = 0;
+        string _textFileName = "textFile_";
         void Start()
         {
-            // string line = "Speaker \"Dialogue \\\"Goes In\\\" Here!\" Command(arguments here)";
-
             SendFilesToParse();
-
-            // DialogueParser.Parse(line);
         }
 
-        void SendFilesToParse()
+        public void SendFilesToParse()
         {
-            List<string> lines = FileManager.ReadTextAsset("textFile", false);
+            List<string> _lines = FileManager.ReadTextAsset(_textFileName + _textFileCounter, false);
+            _dlList = new();
 
-            foreach(string line in lines)
+            foreach (string line in _lines)
             {
                 // if(line == string.Empty)
                 //     continue;
                 DIALOGUE_LINE dl = DialogueParser.Parse(line);
+                _dlList.Add(dl);
             }
         }
     }

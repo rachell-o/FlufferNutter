@@ -4,27 +4,20 @@ using System.Security.Cryptography;
 using UnityEngine;
 using DIALOGUE;
 using UnityEngine.InputSystem;
-using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace TESTING
 {
     public class Testing_Architect : MonoBehaviour
     {
         [SerializeField] TestFiles _testFiles;
+        [SerializeField] TestParsing _testParsing;
         DialogueSystem _ds;
         TextArchitect _architect;
 
         public TextArchitect.BuildMethod bm = TextArchitect.BuildMethod.instant;
         private int _lineCounter = 0;
         private int _nbOfLines;
-        string[] lines = new string[5]
-        {
-            "Hey hey there my dear oldie friend, This is a strange feeling isn't it?",
-            "Not being able to breathe- not being able to see-",
-            "Bakadam bakadazoum I'm trying to make a long line as an example by the way did you know that eating fish is super duper mega cool depending on the season.",
-            "not being able to feel-",
-            "but still beaing able to live."
-        };
 
         void Start()
         {
@@ -37,17 +30,17 @@ namespace TESTING
         // Update is called once per frame
         void Update()
         {
-            if(bm != _architect.buildMethod)
+            if (bm != _architect.buildMethod)
             {
                 _architect.buildMethod = bm;
                 _architect.Stop();
             }
 
-            if(DialogueSystem.instance._s.triggered) _architect.Stop();
+            if (DialogueSystem.instance._s.triggered) _architect.Stop();
 
-            if(DialogueSystem.instance._space.triggered)
+            if (DialogueSystem.instance._space.triggered)
             {
-                if(_architect.isBuilding)
+                if (_architect.isBuilding)
                 {
                     if (!_architect.hurryUp)
                         _architect.hurryUp = true;
@@ -64,12 +57,80 @@ namespace TESTING
 
         private void ShowAllTheLines()
         {
-            _nbOfLines = _testFiles.Lines.Count;
-            List<string> theLines = _testFiles.Lines;
+            _nbOfLines = _testParsing.DlList.Count;
+            
+            if (_lineCounter < _nbOfLines)
+            {
+                List<DIALOGUE_LINE> theLines = _testParsing.DlList;
 
-            _architect.Build(theLines[_lineCounter]);
+                DialogueSystem.instance.dialogueContainer._nameText.text = theLines[_lineCounter].speaker;
+                _architect.Build(theLines[_lineCounter].dialogue);
+
+
+                Regex regex = new Regex(@"(\w+)\((.*?)\)");
+                Match match = regex.Match(theLines[_lineCounter].commands);
+
+                if (theLines[_lineCounter].commands != "")
+                {
+                    if (match.Success && theLines[_lineCounter].commands.Contains("Move"))
+                    {
+                        string commandName = match.Groups[1].Value;
+                        string parameterString = match.Groups[2].Value;
+
+                        Debug.Log("Command: " + commandName);
+
+                        string[] parameters = parameterString.Split(',');
+
+                        // for (int i = 0; i < parameters.Length; i++)
+                        // {
+                        //     Debug.Log($"Param {i}: {parameters[i].Trim()}");
+                        // }
+
+                        DialogueSystem.instance.MoveCharacter(parameters[0], int.Parse(parameters[1]));
+                    }
+                    else if (match.Success && theLines[_lineCounter].commands.Contains("Jump")) //===JUMP
+                    {
+                        string commandName = match.Groups[1].Value;
+                        string parameterString = match.Groups[2].Value;
+
+                        Debug.Log("Command: " + commandName);
+
+                        string[] parameters = parameterString.Split(',');
+
+                        DialogueSystem.instance.Jump(parameters[0], int.Parse(parameters[1]));
+                    }
+                    else if (match.Success && theLines[_lineCounter].commands.Contains("Spin")) //===SPIN
+                    {
+                        string commandName = match.Groups[1].Value;
+                        string parameterString = match.Groups[2].Value;
+
+                        Debug.Log("Command: " + commandName);
+
+                        string[] parameters = parameterString.Split(',');
+
+                        DialogueSystem.instance.Spin(parameters[0], int.Parse(parameters[1]));
+                    }
+                    else if (match.Success && theLines[_lineCounter].commands.Contains("PlaySound"))
+                    {
+
+                    }
+                    else if (match.Success && theLines[_lineCounter].commands.Contains("ChangeSprite"))
+                    {
+
+                    }
+                    else if (match.Success && theLines[_lineCounter].commands.Contains("ChangeBG"))
+                    {
+
+                    }
+                    else if (match.Success && theLines[_lineCounter].commands.Contains("Fade"))
+                    {
+
+                    }
+                }
+            }
+
             _lineCounter++;
-            // if(_lineCounter >= _nbOfLines) Debug.Log("NO MORE LINES!!!");
+            if (_lineCounter >= _nbOfLines) Debug.Log("NO MORE LINES!!!");
         }
     }
 }
