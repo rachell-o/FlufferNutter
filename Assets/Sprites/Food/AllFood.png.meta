@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: food_bad_hand
+      name: food_good_hand
       rect:
         serializedVersion: 2
         x: 69
@@ -145,7 +145,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_bad_chest
+      name: food_good_chest
       rect:
         serializedVersion: 2
         x: 291
@@ -167,7 +167,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_bad_foot
+      name: food_good_foot
       rect:
         serializedVersion: 2
         x: 600
@@ -189,7 +189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_bad_eyes
+      name: food_good_eyes
       rect:
         serializedVersion: 2
         x: 925
@@ -211,10 +211,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_watermelon
+      name: food_bad_watermelon
       rect:
         serializedVersion: 2
-        x: 1167
+        x: 1169
         y: 863
         width: 160
         height: 187
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_lemon
+      name: food_bad_lemon
       rect:
         serializedVersion: 2
         x: 1412
@@ -255,7 +255,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_carrot
+      name: food_bad_carrot
       rect:
         serializedVersion: 2
         x: 1617
@@ -277,10 +277,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_bad_skull
+      name: food_good_skull
       rect:
         serializedVersion: 2
-        x: 330
+        x: 332
         y: 391
         width: 194
         height: 250
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_bad_organ
+      name: food_good_organ
       rect:
         serializedVersion: 2
         x: 910
@@ -321,7 +321,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_cheese
+      name: food_bad_cheese
       rect:
         serializedVersion: 2
         x: 1206
@@ -343,7 +343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_potato
+      name: food_bad_potato
       rect:
         serializedVersion: 2
         x: 1720
@@ -365,7 +365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_bad_pelvis
+      name: food_good_pelvis
       rect:
         serializedVersion: 2
         x: 94
@@ -387,7 +387,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_bad_muscle
+      name: food_good_muscle
       rect:
         serializedVersion: 2
         x: 638
@@ -409,10 +409,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_broccoli
+      name: food_bad_broccoli
       rect:
         serializedVersion: 2
-        x: 1219
+        x: 1221
         y: 354
         width: 190
         height: 217
@@ -431,7 +431,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_mushroom
+      name: food_bad_mushroom
       rect:
         serializedVersion: 2
         x: 1501
@@ -475,11 +475,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_bad_brain
+      name: food_good_brain
       rect:
         serializedVersion: 2
-        x: 62
-        y: 32
+        x: 69
+        y: 34
         width: 294
         height: 180
       alignment: 0
@@ -497,7 +497,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_bad_heart
+      name: food_good_heart
       rect:
         serializedVersion: 2
         x: 393
@@ -519,7 +519,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_soda
+      name: food_bad_soda
       rect:
         serializedVersion: 2
         x: 901
@@ -541,7 +541,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_beet
+      name: food_bad_beet
       rect:
         serializedVersion: 2
         x: 1319
@@ -563,7 +563,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_good_candy
+      name: food_bad_candy
       rect:
         serializedVersion: 2
         x: 1619
@@ -601,26 +601,26 @@ TextureImporter:
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       AllFood_15: -1525199031
-      food_bad_brain: 459554964
-      food_bad_chest: 1701144357
-      food_bad_eyes: 1233610376
-      food_bad_foot: -1760998149
-      food_bad_hand: -1811482174
-      food_bad_heart: 1419413062
-      food_bad_muscle: 1385165288
-      food_bad_organ: 1347165782
-      food_bad_pelvis: -1302161091
-      food_bad_skull: 566865285
-      food_good_beet: -310206659
-      food_good_broccoli: -2013501595
-      food_good_candy: -2053154221
-      food_good_carrot: 1394561088
-      food_good_cheese: 2132072041
-      food_good_lemon: 642654553
-      food_good_mushroom: -855096189
-      food_good_potato: -1351136836
-      food_good_soda: 1981207138
-      food_good_watermelon: 1951178396
+      food_bad_beet: -310206659
+      food_bad_broccoli: -2013501595
+      food_bad_candy: -2053154221
+      food_bad_carrot: 1394561088
+      food_bad_cheese: 2132072041
+      food_bad_lemon: 642654553
+      food_bad_mushroom: -855096189
+      food_bad_potato: -1351136836
+      food_bad_soda: 1981207138
+      food_bad_watermelon: 1951178396
+      food_good_brain: 459554964
+      food_good_chest: 1701144357
+      food_good_eyes: 1233610376
+      food_good_foot: -1760998149
+      food_good_hand: -1811482174
+      food_good_heart: 1419413062
+      food_good_muscle: 1385165288
+      food_good_organ: 1347165782
+      food_good_pelvis: -1302161091
+      food_good_skull: 566865285
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 755099905038930299}
   - component: {fileID: 5694348010651418067}
   - component: {fileID: -7270058709832403176}
+  - component: {fileID: 8082268775224250505}
   m_Layer: 0
   m_Name: Food
   m_TagString: Untagged
@@ -151,7 +152,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -185,3 +186,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7295fb2e72997f247aa7e15977bcad5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodFall
+--- !u!114 &8082268775224250505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566183619180161196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f65f2f392c756a4ab2aa89f4a030b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FoodCollision

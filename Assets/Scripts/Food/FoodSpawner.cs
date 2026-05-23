@@ -4,9 +4,12 @@ public class FoodSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject foodPrefab;
 
-    [SerializeField] private Sprite[] foodSprites;
+    //[SerializeField] private Sprite[] foodSprites;
+    [SerializeField] private Sprite[] goodSprites;
+    [SerializeField] private Sprite[] badSprites;
 
     [SerializeField] private float spawnInterval = 0.5f;
+
 
     private Camera cam;
     private float timer;
@@ -42,6 +45,16 @@ public class FoodSpawner : MonoBehaviour
         GameObject food = Instantiate(foodPrefab, new Vector3(x, y, 0f), Quaternion.identity);
 
         SpriteRenderer sr = food.GetComponent<SpriteRenderer>();
-        sr.sprite = foodSprites[Random.Range(0, foodSprites.Length)];
+        //sr.sprite = foodSprites[Random.Range(0, foodSprites.Length)];
+        FoodCollision fc = food.GetComponent<FoodCollision>();
+
+        bool isGood = Random.value > 0.5f;
+
+        fc.SetGood(isGood);
+
+        if (isGood)
+            sr.sprite = goodSprites[Random.Range(0, goodSprites.Length)];
+        else
+            sr.sprite = badSprites[Random.Range(0, badSprites.Length)];
     }
 }
