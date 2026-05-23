@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BulletMovement : MonoBehaviour
+public class ConstantMovement : MonoBehaviour
 {
     private Rigidbody2D _rb;
 
@@ -13,9 +13,9 @@ public class BulletMovement : MonoBehaviour
         _rb.linearVelocity = transform.up * speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetSpeed(float speed)
     {
-        
+        this.speed = speed;
+        _rb.linearVelocity = transform.up * speed;
     }
 }

@@ -125,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d9b688244ad4444aad35e9b9c18e7ae
-      internalID: -1533559812
+      spriteID: 9e4f25d95db076d4eaa4a8d48b82f6a3
+      internalID: -549493266
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4970300e282e5a641ba1f4a64e1a6f36
-      internalID: -933973609
+      spriteID: d7325f143db3ee946a34b4edbc31d070
+      internalID: -1397241057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheetrocket_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d513c1ac5ac48134ea5fe0eaae4c4c8c
+      internalID: -1672351312
       vertices: []
       indices: 
       edges: []
@@ -157,7 +179,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9cf33982d9230f04f89754656a3d8671
+    spriteID: 93ee3730373f3d24d9b2573b9bf638cb
     internalID: 0
     vertices: []
     indices: 
@@ -167,10 +189,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Spritesheetrocket_0: -1533559812
-      Spritesheetrocket_1: -933973609
+      Spritesheetrocket_0: -549493266
+      Spritesheetrocket_1: -1397241057
+      Spritesheetrocket_2: -1672351312
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
