@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            _rb.AddForce(_rb.linearVelocity * -5f, ForceMode2D.Force);
+            _rb.AddForce(_rb.linearVelocity * -1f, ForceMode2D.Force);
         }
     }
 }
