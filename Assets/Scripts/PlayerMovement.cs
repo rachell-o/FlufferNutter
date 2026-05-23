@@ -8,18 +8,19 @@ public class PlayerMovement : MonoBehaviour
     private InputAction _actPause;
     private Vector2 _movement = new();
     private Rigidbody2D _rb;
-    private SpriteRenderer _sr;
+    //private SpriteRenderer _sr;
+    private Collider2D _col;
 
     [SerializeField] private float MAX_SPEED = 10f;
     [SerializeField] private float DEFAULT_SPEED = 5f;
     [SerializeField] private float SLOW_STOP_SPEED = 1f;
 
-
     void Awake()
     {
         _pi = GetComponentInParent<PlayerInput>();
         _rb = GetComponent<Rigidbody2D>();
-        _sr = GetComponent<SpriteRenderer>();
+        //_sr = GetComponent<SpriteRenderer>();
+        _col = GetComponent<Collider2D>();
         _actMove = _pi.actions["Move"];
     }
 
@@ -56,52 +57,36 @@ public class PlayerMovement : MonoBehaviour
     {
         Camera cam = Camera.main;
 
-        float screenHeight = cam.orthographicSize;
-        float screenWidth = screenHeight * cam.aspect;
-
         Vector3 camPos = cam.transform.position;
         Vector3 pos = transform.position;
 
-        // Half-size of the sprite
-        float halfWidth = _sr.bounds.extents.x;
-        float halfHeight = _sr.bounds.extents.y;
+        float screenHeight = cam.orthographicSize;
+        float screenWidth = screenHeight * cam.aspect;
 
-        bool clamped = false;
+        Bounds b = _col.bounds;
+        float leftBound = camPos.x - screenWidth;
+        float rightBound = camPos.x + screenWidth;
+        float bottomBound = camPos.y - screenHeight;
+        float topBound = camPos.y + screenHeight;
 
-        // Calculate actual screen bounds
-        float leftBound = camPos.x - screenWidth + halfWidth;
-        float rightBound = camPos.x + screenWidth - halfWidth;
-        float bottomBound = camPos.y - screenHeight + halfHeight;
-        float topBound = camPos.y + screenHeight - halfHeight;
+        float deltaX = 0f;
+        float deltaY = 0f;
 
-        // Clamp horizontally
-        if (pos.x < -screenWidth + halfWidth)
-        {
-            pos.x = -screenWidth + halfWidth;
-            clamped = true;
-        }
-        else if (pos.x > screenWidth - halfWidth)
-        {
-            pos.x = screenWidth - halfWidth;
-            clamped = true;
-        }
+        if (b.min.x < leftBound)
+            deltaX = leftBound - b.min.x;
 
-        // Clamp vertically
-        if (pos.y < -screenHeight + halfHeight)
-        {
-            pos.y = -screenHeight + halfHeight;
-            clamped = true;
-        }
-        else if (pos.y > screenHeight - halfHeight)
-        {
-            pos.y = screenHeight - halfHeight;
-            clamped = true;
-        }
+        else if (b.max.x > rightBound)
+            deltaX = rightBound - b.max.x;
 
-        transform.position = pos;
+        if (b.min.y < bottomBound)
+            deltaY = bottomBound - b.min.y;
 
-        // Stop movement when hitting edge
-        if (clamped)
+        else if (b.max.y > topBound)
+            deltaY = topBound - b.max.y;
+
+        transform.position += new Vector3(deltaX, deltaY, 0f);
+
+        if (deltaX != 0 || deltaY != 0)
         {
             _rb.linearVelocity = Vector2.zero;
         }
