@@ -11,7 +11,7 @@ public class FoodFall : MonoBehaviour
 
     void Update()
     {
-        float bottom = cam.transform.position.y - cam.orthographicSize - 2f;
+        float bottom = cam.transform.position.y - cam.orthographicSize - 10f;
 
         if (transform.position.y < bottom)
         {

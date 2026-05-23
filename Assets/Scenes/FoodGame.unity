@@ -351,9 +351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058d1a1288e443441983c91f83cd1209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  MAX_SPEED: 10
-  DEFAULT_SPEED: 7
-  SLOW_STOP_SPEED: 1
+  MAX_SPEED: 20
+  DEFAULT_SPEED: 40
+  SLOW_STOP_SPEED: 10
 --- !u!61 &557993488
 BoxCollider2D:
   m_ObjectHideFlags: 0
