@@ -12,16 +12,19 @@ namespace TESTING
     {
         [SerializeField] TestFiles _testFiles;
         [SerializeField] TestParsing _testParsing;
+        [SerializeField] Phone _phone;
         DialogueSystem _ds;
         TextArchitect _architect;
 
         public TextArchitect.BuildMethod bm = TextArchitect.BuildMethod.instant;
         private int _lineCounter = 0;
         private int _nbOfLines;
+        private bool _canContinue = true;
 
         void Start()
         {
             _ds = DialogueSystem.instance;
+            _phone.test_archRef = gameObject.GetComponent<Testing_Architect>();
             // _ds = DialogueContainer.
             _architect = new TextArchitect(_ds.dialogueContainer._dialogueText);
             _architect.buildMethod = TextArchitect.BuildMethod.fade;
@@ -36,9 +39,9 @@ namespace TESTING
                 _architect.Stop();
             }
 
-            if (DialogueSystem.instance._s.triggered) _architect.Stop();
+            // if (DialogueSystem.instance._s.triggered) _architect.Stop();
 
-            if (DialogueSystem.instance._space.triggered)
+            if (DialogueSystem.instance._space.triggered && _canContinue)
             {
                 if (_architect.isBuilding)
                 {
@@ -58,7 +61,7 @@ namespace TESTING
         private void ShowAllTheLines()
         {
             _nbOfLines = _testParsing.DlList.Count;
-            
+
             if (_lineCounter < _nbOfLines)
             {
                 List<DIALOGUE_LINE> theLines = _testParsing.DlList;
@@ -80,11 +83,6 @@ namespace TESTING
                         Debug.Log("Command: " + commandName);
 
                         string[] parameters = parameterString.Split(',');
-
-                        // for (int i = 0; i < parameters.Length; i++)
-                        // {
-                        //     Debug.Log($"Param {i}: {parameters[i].Trim()}");
-                        // }
 
                         DialogueSystem.instance.MoveCharacter(parameters[0], int.Parse(parameters[1]));
                     }
@@ -114,6 +112,24 @@ namespace TESTING
                     {
 
                     }
+                    else if (match.Success && theLines[_lineCounter].commands.Contains("Anim")) //===ANIM
+                    {
+                        string commandName = match.Groups[1].Value;
+                        string parameterString = match.Groups[2].Value;
+
+                        Debug.Log("Command: " + commandName);
+
+                        string[] parameters = parameterString.Split(',');
+
+                        if (_phone != null)
+                        {
+                            _phone.ActivateAnim(int.Parse(parameters[0]));
+                            if (int.Parse(parameters[0]) == 0)
+                            {
+                                ChangeTextBox(true);
+                            }
+                        }
+                    }
                     else if (match.Success && theLines[_lineCounter].commands.Contains("ChangeSprite"))
                     {
 
@@ -131,6 +147,20 @@ namespace TESTING
 
             _lineCounter++;
             if (_lineCounter >= _nbOfLines) Debug.Log("NO MORE LINES!!!");
+        }
+
+        public void ChangeTextBox(bool hide)
+        {
+            if (hide)
+            {
+                _canContinue = false;
+                _ds.dialogueContainer._root.SetActive(false);
+            }
+            else
+            {
+                _canContinue = true;
+                _ds.dialogueContainer._root.SetActive(true);
+            }
         }
     }
 }

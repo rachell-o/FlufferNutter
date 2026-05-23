@@ -31,7 +31,8 @@ namespace DIALOGUE
         void Awake()
         {
             if (!DevenirInstanceSingleton()) return;
-            _pi = GetComponent<PlayerInput>();
+            // _pi = GetComponent<PlayerInput>();
+            _pi = GameManager.instance.Pi;
             _s = _pi.actions["S"];
             _space = _pi.actions["Space"];
             _a = _pi.actions["A"];

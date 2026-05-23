@@ -1,10 +1,19 @@
 "Salutations Y/N!"
 "You’re a dictator on the rise to power with the desire to take over the world." 
-"Good for you! 😀" 
+"Good for you!"
+"However, it's a big task to take alone."
 "If history has taught us anything, it’s just that humans are weak and that such power can only be obtained from other higher beings."
 "Turns out, the entire universe is desperately single, not just humans."
-"If we want to obtain the power to conquer the planet, you must successfully woo one of the most three powerful entities in the galaxy:"
-
+"Let me introduce Daddle!"
+Anim(0,0)
+"It's the dating app that's been trending lately. Creatures from all over the universe use it."
+"In this era, it has become the norm to meet people through the internet since most of us have become shut-ins (including you)."
+"Anyway."
+"If you want to obtain the power to conquer the planet, you must successfully woo one of the most three powerful entities in the galaxy:"
+"Xanthg of the Aliens"
+"Carl  of the Zombies"
+"Hal of the Robots"
+"Look who you matched with! Say something to charm them… don’t fumble this one!"
 
 Move(z,1)
 Joe"MMMMMMMMMMMMMMMMM BEEP BEEP BEEP BEEP"
