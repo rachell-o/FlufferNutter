@@ -10,11 +10,12 @@ public class BulletMovement : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _rb.linearVelocity = transform.up * speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _rb.linearVelocity = transform.up * speed;
+        
     }
 }
