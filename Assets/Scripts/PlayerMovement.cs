@@ -8,7 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private InputAction _actPause;
     private Vector2 _movement = new();
     private Rigidbody2D _rb;
-    const float MAX_SPEED = 10f;
+
+    [SerializeField] private float MAX_SPEED = 10f;
+    [SerializeField] private float DEFAULT_SPEED = 5;
+    [SerializeField] private float SLOW_STOP_SPEED = 1f;
+
 
     void Awake()
     {
@@ -29,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_movement.x != 0 || _movement.y != 0)
         {
-            _rb.AddForce(_movement.normalized * 5f, ForceMode2D.Force);
+            _rb.AddForce(_movement.normalized * DEFAULT_SPEED, ForceMode2D.Force);
             // _rb.MovePosition(_movement.normalized * 1f);
             // _rb.linearVelocity = _movement.normalized * 1f;
             // gameObject.transform.Translate(_movement * 8f * Time.deltaTime);
@@ -40,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            _rb.AddForce(_rb.linearVelocity * -1f, ForceMode2D.Force);
+            _rb.AddForce(_rb.linearVelocity * -SLOW_STOP_SPEED, ForceMode2D.Force);
         }
     }
 }
