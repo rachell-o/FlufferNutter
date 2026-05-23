@@ -1,14 +1,26 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
     static GameManager _instance;
     public static GameManager instance => _instance;
+    private PlayerInput _pi;
+    public PlayerInput Pi => _pi;
+    private Camera _camera;
+    public Camera Camera => _camera;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         if (!BecomeSingleton()) return;
+        _pi = GetComponent<PlayerInput>();
+        FindNewCamera();
+    }
+
+    public void FindNewCamera()
+    {
+        _camera = Camera.main;
     }
 
     /// <summary>
