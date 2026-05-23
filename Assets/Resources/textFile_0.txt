@@ -1,0 +1,13 @@
+"Salutations Y/N!"
+"You’re a dictator on the rise to power with the desire to take over the world." 
+"Good for you! 😀" 
+"If history has taught us anything, it’s just that humans are weak and that such power can only be obtained from other higher beings."
+"Turns out, the entire universe is desperately single, not just humans."
+"If we want to obtain the power to conquer the planet, you must successfully woo one of the most three powerful entities in the galaxy:"
+
+
+Move(z,1)
+Joe"MMMMMMMMMMMMMMMMM BEEP BEEP BEEP BEEP"
+Bill"I love candles"Jump(z,2)
+Joe"Chikibawawa"
+Joe"Wow!"Spin(z,2)
