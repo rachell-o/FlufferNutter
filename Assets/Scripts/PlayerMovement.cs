@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rb;
 
     [SerializeField] private float MAX_SPEED = 10f;
-    [SerializeField] private float DEFAULT_SPEED = 5;
+    [SerializeField] private float DEFAULT_SPEED = 5f;
     [SerializeField] private float SLOW_STOP_SPEED = 1f;
 
 
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         _actMove = _pi.actions["Move"];
     }
 
-    void Update()
+    void FixedUpdate()
     {
         _movement = _actMove.ReadValue<Vector2>();
         // Debug.Log(_actMove.ReadValue<Vector2>());
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
             // gameObject.transform.Translate(_movement * 8f * Time.deltaTime);
             if(_rb.linearVelocity.magnitude > MAX_SPEED)
             {
-                _rb.linearVelocity = _movement.normalized * MAX_SPEED;
+                _rb.linearVelocity = _rb.linearVelocity.normalized * MAX_SPEED;
             }
         }
         else
