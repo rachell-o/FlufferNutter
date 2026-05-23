@@ -119,6 +119,73 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &304515559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 304515561}
+  - component: {fileID: 304515560}
+  m_Layer: 0
+  m_Name: FoodSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &304515560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304515559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb4c5fd3a2616a478168d80c70bbb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FoodSpawner
+  foodPrefab: {fileID: 7566183619180161196, guid: 70547cf35c03d204aa4e84b1dd03bd63, type: 3}
+  foodSprites:
+  - {fileID: 459554964, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 1233610376, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: -1760998149, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: -1811482174, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 1419413062, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 1385165288, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 1347165782, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: -1302161091, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 566865285, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 1701144357, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: -310206659, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: -2013501595, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: -2053154221, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 1394561088, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 2132072041, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 642654553, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: -855096189, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: -1351136836, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 1981207138, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  - {fileID: 1951178396, guid: e12b10cdcd7d47e489146b3e3479d296, type: 3}
+  spawnInterval: 0.5
+--- !u!4 &304515561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304515559}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557993481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,3 +1068,4 @@ SceneRoots:
   - {fileID: 1645378491}
   - {fileID: 557993483}
   - {fileID: 1650194915}
+  - {fileID: 304515561}
