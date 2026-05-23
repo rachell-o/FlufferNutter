@@ -9,10 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movement = new();
     private Rigidbody2D _rb;
 
-    [SerializeField]
-    private const float MAX_SPEED = 10f;
-    private const float DEFAULT_SPEED = 5;
-    private const float SLOW_STOP_SPEED = 1f;
+    [SerializeField] private float MAX_SPEED = 10f;
+    [SerializeField] private float DEFAULT_SPEED = 5;
+    [SerializeField] private float SLOW_STOP_SPEED = 1f;
 
 
     void Awake()
