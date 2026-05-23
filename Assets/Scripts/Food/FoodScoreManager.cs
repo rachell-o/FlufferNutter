@@ -24,8 +24,14 @@ public class FoodScoreManager : MonoBehaviour
         UpdateUI();
     }
 
+    public int GetScore()
+    {
+        return score;
+    }
+
     void UpdateUI()
     {
         scoreText.text = "Score: " + score;
     }
+
 }

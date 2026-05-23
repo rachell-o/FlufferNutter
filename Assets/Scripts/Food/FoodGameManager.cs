@@ -1,11 +1,13 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FoodGameManager : MonoBehaviour
 {
     [SerializeField] private float gameTime = 10f;
-
     [SerializeField] private TMP_Text timerText;
+    [SerializeField] private GameObject endScreen;
+    [SerializeField] private TMP_Text finalScoreText;
 
     private bool gameEnded = false;
 
@@ -37,5 +39,17 @@ public class FoodGameManager : MonoBehaviour
         Debug.Log("GAME OVER");
 
         Time.timeScale = 0f;
+        
+        endScreen.SetActive(true);
+
+        finalScoreText.text =
+            "Final Score: " + FoodScoreManager.Instance.GetScore();
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("MainMenu");
     }
 }
