@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D _col;
 
     [SerializeField] private float MAX_SPEED = 10f;
-    [SerializeField] private float DEFAULT_SPEED = 5f;
+    [SerializeField] private float DEFAULT_SPEED = 5f   ;
     [SerializeField] private float SLOW_STOP_SPEED = 1f;
 
     void Awake()
