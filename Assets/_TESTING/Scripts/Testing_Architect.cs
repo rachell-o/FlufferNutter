@@ -24,7 +24,7 @@ namespace TESTING
         void Start()
         {
             _ds = DialogueSystem.instance;
-            _phone.test_archRef = gameObject.GetComponent<Testing_Architect>();
+            if (_phone != null) _phone.test_archRef = gameObject.GetComponent<Testing_Architect>();
             // _ds = DialogueContainer.
             _architect = new TextArchitect(_ds.dialogueContainer._dialogueText);
             _architect.buildMethod = TextArchitect.BuildMethod.fade;
