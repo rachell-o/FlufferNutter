@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7566779624623512681}
   - component: {fileID: 8937496330810407516}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 3725619778691255811}
   - component: {fileID: 5369163910629648746}
   - component: {fileID: 2499840513489078832}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

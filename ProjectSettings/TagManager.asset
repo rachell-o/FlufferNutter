@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Bullet
-  - 
+  - Asteroid
   - 
   - 
   - 
@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 2415619679
+    locked: 0
   - name: Behind
     uniqueID: 4180544535
     locked: 0

@@ -7,14 +7,22 @@ public class AsteroidExplode : MonoBehaviour
     [SerializeField] GameObject flare;
     private GameObject bullet;
     private bool isExploding = false;
+
+    [SerializeField] RoundManager manager;
     
-    void Awake()
+    void Start()
+    {
+        Invoke("AddAnimator", 0.5f);
+    }
+
+    void AddAnimator()
     {
         animator = GetComponentInChildren<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("detect");
         if (isExploding)
         {
             return;
@@ -29,12 +37,20 @@ public class AsteroidExplode : MonoBehaviour
             Instantiate(flare, bullet.transform.position + (bullet.transform.up * -0.2f), bullet.transform.rotation);
             Destroy(bullet);
         }
+        if(collision.tag == "Player")
+        {
+            Debug.Log("pplat");
+            manager.Fail();
+        }
     }
 
     void Explode()
     {
         isExploding = true;
-        animator.SetTrigger("Explode");
+        if(animator != null)
+        {
+            animator.SetTrigger("Explode");
+        }
         StartCoroutine(SelfDestruct());
     }
 

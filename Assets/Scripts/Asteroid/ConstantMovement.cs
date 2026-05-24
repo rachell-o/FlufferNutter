@@ -10,12 +10,12 @@ public class ConstantMovement : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _rb.linearVelocity = transform.up * speed;
+        _rb.linearVelocity = this.transform.up * speed;
     }
 
     public void SetSpeed(float speed)
     {
         this.speed = speed;
-        _rb.linearVelocity = transform.up * speed;
+        _rb.linearVelocity = this.transform.up * speed;
     }
 }
