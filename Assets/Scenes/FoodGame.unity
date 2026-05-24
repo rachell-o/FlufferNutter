@@ -1374,11 +1374,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b22f07ea351cd4c80ef6e6669f03fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodGameManager
+  _nav: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
   gameTime: 10
   timerText: {fileID: 983601358}
   endScreen: {fileID: 527902610}
   finalScoreText: {fileID: 1728337434}
   skillet: {fileID: 557993481}
+  cursorHand: {fileID: 1445558276}
   instructionPanel: {fileID: 893876543}
 --- !u!4 &1148244705
 Transform:
@@ -1471,6 +1473,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198260008}
   m_CullTransparentMesh: 1
+--- !u!1 &1445558276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3208686474095881443, guid: f80e4ce933e389e4bb7910e0843f9de2, type: 3}
+  m_PrefabInstance: {fileID: 954706806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1593572347
 GameObject:
   m_ObjectHideFlags: 0

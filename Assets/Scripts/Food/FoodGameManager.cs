@@ -4,13 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class FoodGameManager : MonoBehaviour
 {
+    [SerializeField] private SONavigation _nav;
     [SerializeField] private float gameTime = 10f;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private GameObject endScreen;
     [SerializeField] private TMP_Text finalScoreText;
     
     [SerializeField] private GameObject skillet;
-    //[SerializeField] private GameObject cursorHandPrefab;
+    [SerializeField] private GameObject cursorHand;
     //[SerializeField] private Transform cursorSpawnPoint;
     [SerializeField] private GameObject instructionPanel;
 
@@ -73,6 +74,13 @@ public class FoodGameManager : MonoBehaviour
         }
 
         Destroy(skillet);
+        cursorHand.SetActive(true);
+        // if Win
+        // _nav.GetSceneByName(somethingstring)
+        // if lose
+        // _nav.GetSceneByName(somethingstring)
+
+
 
         //Instantiate(
         //    cursorHandPrefab,
