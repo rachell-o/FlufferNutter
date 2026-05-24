@@ -1,1 +1,2 @@
 "They capture you and implant a tiny chip inside your brain. You are their slave for the rest of your life."
+LeaderBoard(1,1)

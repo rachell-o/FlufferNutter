@@ -5,6 +5,7 @@ using UnityEngine;
 using DIALOGUE;
 using UnityEngine.InputSystem;
 using System.Text.RegularExpressions;
+using UnityEngine.SceneManagement;
 
 namespace TESTING
 {
@@ -137,15 +138,31 @@ namespace TESTING
                     {
 
                     }
-                    else if (match.Success && theLines[_lineCounter].commands.Contains("Fade"))
+                    else if (match.Success && theLines[_lineCounter].commands.Contains("LeaderBoard"))
                     {
-
+                        GameManager.instance.Nav.GetSceneByName("SceneLeaderboard");
                     }
                 }
             }
 
             _lineCounter++;
-            if (_lineCounter >= _nbOfLines) Debug.Log("NO MORE LINES!!!");
+            if (_lineCounter == _nbOfLines) Debug.Log("NO MORE LINES!!!");
+            if (_lineCounter > _nbOfLines)
+            {
+                string sceneName = SceneManager.GetActiveScene().name;
+                if (sceneName.Contains("A1"))
+                {
+                    GameManager.instance.Nav.GoNextScene();
+                }
+                else if (sceneName.Contains("Z1"))
+                {
+                    GameManager.instance.Nav.GoNextScene();
+                }
+                else if (sceneName.Contains("R1"))
+                {
+                   GameManager.instance.Nav.GoNextScene();
+                }
+            }
         }
 
         public void ChangeTextBox(bool hide)

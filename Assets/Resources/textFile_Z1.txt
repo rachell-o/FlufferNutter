@@ -1,6 +1,6 @@
 Carl"Hey there partner!"
 Move(z,1)
-Carl"You smell... quite delectable... *drools*"
+Carl"You smell... quite delectable... *drools*" Spin(z,2)
 Carl"I won’t lend you the power of my people just because you look tasty."
 Carl"That won’t satiate our hunger."
 Carl"If you prepare a feast that satisfies our tummies, I’ll consider lending you our power."

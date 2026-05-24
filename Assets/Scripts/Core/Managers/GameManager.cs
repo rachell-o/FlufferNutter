@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private SONavigation _nav;
+    public SONavigation Nav => _nav;
     static GameManager _instance;
     public static GameManager instance => _instance;
     private PlayerInput _pi;
