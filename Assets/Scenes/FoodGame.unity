@@ -125,31 +125,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1645378491}
+    m_TransformParent: {fileID: 527902611}
     m_Modifications:
     - target: {fileID: 5923336633641699200, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
       propertyPath: m_LocalScale.x
-      value: 119.9574
+      value: 124.79317
       objectReference: {fileID: 0}
     - target: {fileID: 5923336633641699200, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
       propertyPath: m_LocalScale.y
-      value: 119.9574
+      value: 124.79317
       objectReference: {fileID: 0}
     - target: {fileID: 5923336633641699200, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
       propertyPath: m_LocalScale.z
-      value: 119.9574
+      value: 31.198292
       objectReference: {fileID: 0}
     - target: {fileID: 5923336633641699200, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 5923336633641699200, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -287.8978
+      value: -699
       objectReference: {fileID: 0}
     - target: {fileID: 5923336633641699200, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.000131
+      value: 2.600869
       objectReference: {fileID: 0}
     - target: {fileID: 5923336633641699200, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
       propertyPath: m_LocalRotation.w
@@ -182,6 +182,10 @@ PrefabInstance:
     - target: {fileID: 6627868965172025046, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
       propertyPath: m_Name
       value: TestButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627868965172025046, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6627868965172025046, guid: c31fe29aceca9d547aad9a12d47cba52, type: 3}
       propertyPath: m_TagString
@@ -283,7 +287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &395742695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -415,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &527902611
 RectTransform:
   m_ObjectHideFlags: 0
@@ -428,6 +432,7 @@ RectTransform:
   m_LocalScale: {x: 0.9612497, y: 0.9612497, z: 3.8449988}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 26370547}
   - {fileID: 1728337433}
   - {fileID: 1991923906}
   - {fileID: 395742695}
@@ -634,7 +639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &557993482
 SpriteRenderer:
   serializedVersion: 2
@@ -1071,7 +1076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &893876544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1141,6 +1146,10 @@ PrefabInstance:
     - target: {fileID: 3208686474095881443, guid: f80e4ce933e389e4bb7910e0843f9de2, type: 3}
       propertyPath: m_Name
       value: CursorHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208686474095881443, guid: f80e4ce933e389e4bb7910e0843f9de2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3208686474095881443, guid: f80e4ce933e389e4bb7910e0843f9de2, type: 3}
       propertyPath: m_TagString
@@ -1664,7 +1673,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 26370547}
   - {fileID: 839840715}
   - {fileID: 1593572348}
   - {fileID: 1198260009}
@@ -1924,6 +1932,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _nav: {fileID: 0}
+  Player_name: Test
+  Love_Interest: Alien
+  Won_The_MiniGame: 0
 --- !u!114 &1694536378
 MonoBehaviour:
   m_ObjectHideFlags: 0

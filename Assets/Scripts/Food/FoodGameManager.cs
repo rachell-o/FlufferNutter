@@ -14,7 +14,7 @@ public class FoodGameManager : MonoBehaviour
     //[SerializeField] private Transform cursorSpawnPoint;
     [SerializeField] private GameObject instructionPanel;
 
-    private bool gameStarted = false;
+    private bool gameStarted = true; // IF YOU WANT A PAUSE BEFORE THE GAME STARTS, CHANGE THIS TO FALSE
     private bool gameEnded = false;
 
     void Update()

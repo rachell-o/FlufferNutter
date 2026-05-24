@@ -13,7 +13,7 @@ public class FoodSpawner : MonoBehaviour
     private Camera cam;
     private float timer;
     private bool gameEnded = false;
-    private bool canSpawn = false;
+    private bool canSpawn = true; //IF YOU WANT THE GAME TO BE PAUSED BEFORE YOU START, CHANGE TO FALSE.
 
     void Start()
     {

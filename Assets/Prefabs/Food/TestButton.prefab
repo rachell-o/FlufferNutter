@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1032704774, guid: d4f32d397cbe35d4ba72c155d2a0e316, type: 3}
+  m_Sprite: {fileID: -1587269741, guid: c6a4ce71fc7c6294ab2b5f8918fc8fa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _highlightedSprite: {fileID: 1862893733, guid: d4f32d397cbe35d4ba72c155d2a0e316, type: 3}
+  _highlightedSprite: {fileID: 856495317, guid: c6a4ce71fc7c6294ab2b5f8918fc8fa9, type: 3}
 --- !u!65 &671785018396326355
 BoxCollider:
   m_ObjectHideFlags: 0
