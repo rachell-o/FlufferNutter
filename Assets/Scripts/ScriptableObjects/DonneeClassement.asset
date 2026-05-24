@@ -13,28 +13,8 @@ MonoBehaviour:
   m_Name: DonneeClassement
   m_EditorClassIdentifier: Assembly-CSharp::SOScore
   _lesDonneesTableau:
-  - name: Test
+  - name: Evil Sloth
     charac: Alien
     won: 0
-    isActualScore: 1
-  - name: Test
-    charac: Alien
-    won: 0
-    isActualScore: 1
-  - name: Test
-    charac: Alien
-    won: 0
-    isActualScore: 1
-  - name: Miraculous Kyle
-    charac: Zombie
-    won: 0
-    isActualScore: 1
-  - name: Super Destroyer
-    charac: Zombie
-    won: 1
-    isActualScore: 1
-  - name: Adorable Monk
-    charac: Alien
-    won: 1
     isActualScore: 1
   _fichier: score.json
