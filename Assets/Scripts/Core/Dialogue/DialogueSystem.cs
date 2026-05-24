@@ -34,8 +34,8 @@ namespace DIALOGUE
             // _pi = GetComponent<PlayerInput>();
             _pi = GameManager.instance.Pi;
             _s = _pi.actions["S"];
-            _space = _pi.actions["Space"];
-            _a = _pi.actions["A"];
+            _space = _pi.actions["Attack"];
+            // _a = _pi.actions["A"];
         }
 
         public void Say(string speaker, string dialogue)
@@ -72,11 +72,11 @@ namespace DIALOGUE
             }
             else if (character == "a")
             {
-
+                _coroutRef = StartCoroutine(MoveCharacterCorout(_aCharac, _characPos[pos].position));
             }
             else if (character == "r")
             {
-
+                _coroutRef = StartCoroutine(MoveCharacterCorout(_rCharac, _characPos[pos].position));
             }
         }
 
@@ -101,11 +101,11 @@ namespace DIALOGUE
             }
             else if (character == "a")
             {
-
+                _coroutRef = StartCoroutine(JumpCorout(_aCharac, height));
             }
             else if (character == "r")
             {
-
+                _coroutRef = StartCoroutine(JumpCorout(_rCharac, height));
             }
         }
 
@@ -140,11 +140,11 @@ namespace DIALOGUE
             }
             else if (character == "a")
             {
-
+                _coroutRef = StartCoroutine(SpinCorout(_aCharac, turns));
             }
             else if (character == "r")
             {
-
+                _coroutRef = StartCoroutine(SpinCorout(_rCharac, turns));
             }
         }
 

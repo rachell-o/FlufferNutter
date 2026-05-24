@@ -1,0 +1,10 @@
+Hal"Greetings!"
+Move(r,1)
+Hal"Oh my days, I must say, your complexion is illuminating!"
+Hal"You’re quite the charmer wannabe, I see!"
+Hal"That doesn’t mean I’ll let you lead my army of humanoids, you must prove yourself."
+Hal"Even though we are highly developed beings, we gain knowledge through experience."
+Hal"Please guide me through electric cables so that I learn how to get around."
+Hal"DON'T GO OFF THE CABLES!"
+Hal"It's very important."
+Hal"Sorry for yelling."

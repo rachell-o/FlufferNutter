@@ -24,13 +24,12 @@ namespace TESTING
         void Start()
         {
             _ds = DialogueSystem.instance;
-            _phone.test_archRef = gameObject.GetComponent<Testing_Architect>();
+            if (_phone != null) _phone.test_archRef = gameObject.GetComponent<Testing_Architect>();
             // _ds = DialogueContainer.
             _architect = new TextArchitect(_ds.dialogueContainer._dialogueText);
             _architect.buildMethod = TextArchitect.BuildMethod.fade;
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (bm != _architect.buildMethod)
@@ -49,7 +48,7 @@ namespace TESTING
                         _architect.hurryUp = true;
                     else _architect.ForceComplete();
                 }
-                else ShowAllTheLines();
+                else ShowLines();
                 // else _architect.Build(lines[2]);
             }
             // else if(DialogueSystem.instance._a.triggered)
@@ -58,7 +57,7 @@ namespace TESTING
             // }
         }
 
-        private void ShowAllTheLines()
+        private void ShowLines()
         {
             _nbOfLines = _testParsing.DlList.Count;
 
@@ -124,7 +123,7 @@ namespace TESTING
                         if (_phone != null)
                         {
                             _phone.ActivateAnim(int.Parse(parameters[0]));
-                            if (int.Parse(parameters[0]) == 0)
+                            if (int.Parse(parameters[0]) == 0 || int.Parse(parameters[0]) == 4)
                             {
                                 ChangeTextBox(true);
                             }
