@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class FoodGameManager : MonoBehaviour
 {
     [SerializeField] private SONavigation _nav;
-    [SerializeField] private float gameTime = 10f;
+    [SerializeField] private float gameTime = 30f;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private GameObject endScreen;
     [SerializeField] private TMP_Text finalScoreText;
@@ -17,6 +17,8 @@ public class FoodGameManager : MonoBehaviour
 
     private bool gameStarted = true; // IF YOU WANT A PAUSE BEFORE THE GAME STARTS, CHANGE THIS TO FALSE
     private bool gameEnded = false;
+    private string nextSceneName;
+    
 
     void Update()
     {
@@ -80,8 +82,6 @@ public class FoodGameManager : MonoBehaviour
         // if lose
         // _nav.GetSceneByName(somethingstring)
 
-
-
         //Instantiate(
         //    cursorHandPrefab,
         //    cursorSpawnPoint.position,
@@ -89,9 +89,17 @@ public class FoodGameManager : MonoBehaviour
         //);
 
         endScreen.SetActive(true);
-
-        finalScoreText.text =
-            "Final Score: " + FoodScoreManager.Instance.GetScore();
+      
+        int finalScore = FoodScoreManager.Instance.GetScore();
+        if (finalScore > 0)
+        {
+            nextSceneName = "SceneGEZ";
+        }
+        else
+        {
+            nextSceneName = "SceneBEZ";
+        }
+        finalScoreText.text = "Final Score: " + finalScore;
     }
 
     public void LoadMainMenu()
@@ -99,5 +107,10 @@ public class FoodGameManager : MonoBehaviour
         //Time.timeScale = 1f;
 
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadNextScene()
+    {
+        _nav.GetSceneByName(nextSceneName);
     }
 }

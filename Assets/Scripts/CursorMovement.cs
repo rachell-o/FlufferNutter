@@ -25,6 +25,7 @@ public class CursorMovement : MonoBehaviour
         _sr = GetComponent<SpriteRenderer>();
         _actMove = _pi.actions["Move"];
         _space = _pi.actions["Attack"];
+        if(GameManager.instance.Camera == null) GameManager.instance.FindNewCamera();
         _cam = GameManager.instance.Camera;
     }
 
