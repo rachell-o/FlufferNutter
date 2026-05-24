@@ -18,7 +18,6 @@ public class DonneeTableau
     public bool isActualScore;
 }
 
-[System.Serializable]
 public class TableauScores
 {
     public List<DonneeTableau> scores = new List<DonneeTableau>();
@@ -114,5 +113,27 @@ public class SOScore : ScriptableObject
         _lesDonneesTableau.Add(nouveauScore);
 
         EcrireFichier();
+    }
+
+    public void ViderScores()
+    {
+        string chemin =
+                Path.Combine(Application.persistentDataPath, _fichier);
+
+        _lesDonneesTableau.Clear();
+
+        if (File.Exists(chemin))
+        {
+            File.Delete(chemin);
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+        SynchroniserWebGL();
+#endif
+
+            Debug.Log("Fichier supprimé");
+        }
+
+        Debug.Log("Nombre scores restants : " +
+                  _lesDonneesTableau.Count);
     }
 }
