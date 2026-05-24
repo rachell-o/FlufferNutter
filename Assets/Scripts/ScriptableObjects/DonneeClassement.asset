@@ -33,4 +33,8 @@ MonoBehaviour:
     charac: Zombie
     won: 1
     isActualScore: 1
+  - name: Adorable Monk
+    charac: Alien
+    won: 1
+    isActualScore: 1
   _fichier: score.json
