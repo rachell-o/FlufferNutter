@@ -13,8 +13,15 @@ using System.Runtime.InteropServices;
 public class DonneeTableau
 {
     public string name;
-    public Dictionary<string, string> characAndscore;
+    public string charac;
+    public bool won;
     public bool isActualScore;
+}
+
+[System.Serializable]
+public class TableauScores
+{
+    public List<DonneeTableau> scores = new List<DonneeTableau>();
 }
 
 /// <summary>
@@ -34,7 +41,7 @@ public class SOScore : ScriptableObject
     [DllImport("__Internal")]
     private static extern void SynchroniserWebGL();
 
-    [SerializeField] string _fichier = "score.tim"; //fichier qui va contenir les informations
+    [SerializeField] string _fichier = "score.json"; //fichier qui va contenir les informations
 
     /// <summary>
     /// #tp4 Soraya
@@ -43,13 +50,17 @@ public class SOScore : ScriptableObject
     /// </summary>
     public void LireFichier()
     {
-        string fichierEtChemin = Application.persistentDataPath + "/" + _fichier; //chemin de l'emplacement du fichier
-        Debug.Log(fichierEtChemin);
+        // string fichierEtChemin = Application.persistentDataPath + "/" + _fichier; //chemin de l'emplacement du fichier
+        string chemin = Path.Combine(Application.persistentDataPath, _fichier); ; //chemin de l'emplacement du fichier
+        Debug.Log(chemin);
 
-        if (File.Exists(fichierEtChemin)) //si le chemin du fichier
+        if (File.Exists(chemin)) //si le chemin du fichier
         {
-            string contenu = File.ReadAllText(fichierEtChemin);
-            JsonUtility.FromJsonOverwrite(contenu, _lesDonneesTableau); 
+            string contenu = File.ReadAllText(chemin);
+            TableauScores data =
+                JsonUtility.FromJson<TableauScores>(contenu);
+            _lesDonneesTableau = data.scores;
+            // JsonUtility.FromJsonOverwrite(contenu, _lesDonneesTableau);
 #if UNITY_EDITOR
             UnityEditor.EditorUtility.SetDirty(this); //pour que unity sache que le fichier a été modifié
             UnityEditor.AssetDatabase.SaveAssets(); //sauvegarde les changements
@@ -65,16 +76,43 @@ public class SOScore : ScriptableObject
     /// </summary>
     public void EcrireFichier()
     {
-        string fichierEtChemin = Application.persistentDataPath + "/" + _fichier; //cherche le chemin du fichier score.tim
-        string contenu = JsonUtility.ToJson(this); //transorme la liste en Json
-        File.WriteAllText(fichierEtChemin, contenu);
+        string chemin = Path.Combine(Application.persistentDataPath, _fichier); //cherche le chemin du fichier score.tim
+        Debug.Log("Le chemin!" + chemin);
 
-        if (Application.platform == RuntimePlatform.WebGLPlayer) // Vérifie si l'application est exécutée sur la plateforme WebGL
-        {
-            SynchroniserWebGL(); // Appelle une fonction JavaScript spécifique pour synchroniser les données avec WebGL
-            Debug.Log("Hoi webGL!");
-        }
+        TableauScores data = new TableauScores();
+        data.scores = _lesDonneesTableau;
+
+        string contenu = JsonUtility.ToJson(data, true); //transorme la liste en Json
+        File.WriteAllText(chemin, contenu);
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+        SynchroniserWebGL();
+#endif
+
+        // if (Application.platform == RuntimePlatform.WebGLPlayer) // Vérifie si l'application est exécutée sur la plateforme WebGL
+        // {
+        //     SynchroniserWebGL(); // Appelle une fonction JavaScript spécifique pour synchroniser les données avec WebGL
+        //     Debug.Log("Hoi webGL!");
+        // }
 
         Debug.Log("Fichier écrit");
+    }
+
+    public void AjouterScore(
+        string nom,
+        string personnage,
+        bool victoire,
+        bool scoreActuel)
+    {
+        DonneeTableau nouveauScore = new DonneeTableau();
+
+        nouveauScore.name = nom;
+        nouveauScore.charac = personnage;
+        nouveauScore.won = victoire;
+        nouveauScore.isActualScore = scoreActuel;
+
+        _lesDonneesTableau.Add(nouveauScore);
+
+        EcrireFichier();
     }
 }
