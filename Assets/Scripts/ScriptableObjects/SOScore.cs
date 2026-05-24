@@ -38,9 +38,19 @@ public class SOScore : ScriptableObject
     }
 
     [DllImport("__Internal")]
+    private static extern void InitialiserSauvegarde();
+
+    [DllImport("__Internal")]
     private static extern void SynchroniserWebGL();
 
     [SerializeField] string _fichier = "score.json"; //fichier qui va contenir les informations
+
+    private void Start()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+    InitialiserSauvegarde();
+#endif
+    }
 
     /// <summary>
     /// #tp4 Soraya

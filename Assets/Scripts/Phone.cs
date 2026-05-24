@@ -26,12 +26,17 @@ public class Phone : MonoBehaviour
         else if (num == 3) _anim.SetTrigger("ShowZ");
         else if (num == 4)
         {
-            foreach (GameObject chara in _chara)
-            {
-                chara.SetActive(true);
-            }
-            gameObject.SetActive(false);
+            Invoke("FinalAnim", 1.5f);
         }
+    }
+
+    private void FinalAnim()
+    {
+        foreach (GameObject chara in _chara)
+        {
+            chara.SetActive(true);
+        }
+        gameObject.SetActive(false);
     }
 
     public void OpenDaddle()
