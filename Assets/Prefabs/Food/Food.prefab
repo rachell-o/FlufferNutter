@@ -200,3 +200,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FoodCollision
   isGood: 0
   explosionPrefab: {fileID: 9095453728254904840, guid: 0f4df9f93a4a9804cb4d8cc58db3cddb, type: 3}
+  badFoodSound: {fileID: 8300000, guid: 6a20dc5a535f3304aa525729df29488a, type: 3}
+  goodFoodSound: {fileID: 8300000, guid: b0ba3cc89aacd65439c19900acdca347, type: 3}

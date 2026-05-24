@@ -4,15 +4,34 @@ public class FoodCollision : MonoBehaviour
 {
     [SerializeField] private bool isGood;
     [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private AudioClip badFoodSound;
+    [SerializeField] private AudioClip goodFoodSound;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Skillet"))
         {
-            if (isGood)
-                FoodScoreManager.Instance.AddScore(1);
-            else
-                FoodScoreManager.Instance.AddScore(-1);
+
+        if (isGood)
+        {
+            FoodScoreManager.Instance.AddScore(1);
+            
+            AudioSource.PlayClipAtPoint(
+                goodFoodSound,
+                Camera.main.transform.position,
+                1.0f
+            );
+        }
+        else
+        {
+            FoodScoreManager.Instance.AddScore(-1);
+
+            AudioSource.PlayClipAtPoint(
+                badFoodSound,
+                Camera.main.transform.position,
+                0.15f
+            );
+        }
 
             // Instantiate explosion effect as child of skillet, "other" is Skillet
             GameObject explosion = Instantiate(
