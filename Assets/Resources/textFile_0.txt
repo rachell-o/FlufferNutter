@@ -9,7 +9,7 @@ Anim(0,0)
 "It's the dating app that's been trending lately. Creatures from all over the universe use it."
 "In this era, it has become the norm to meet people through the internet since most of us have become shut-ins (including you)."
 "Anyway."
-"If you want to obtain the power to conquer the planet, you must successfully woo one of the most three powerful entities in the galaxy:"
+"If you want to obtain the power to conquer the planet, you must successfully woo one of the three most powerful entities in the galaxy:"
 "Xanthg of the Aliens"Anim(1,0)
 "Hal of the Robots"Anim(2,0)
 "Carl  of the Zombies"Anim(3,0)
