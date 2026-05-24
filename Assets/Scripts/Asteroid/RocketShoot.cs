@@ -16,7 +16,7 @@ public class RocketShoot : MonoBehaviour
 
     private void Awake()
     {
-        _pi = GetComponent<PlayerInput>();
+        _pi = GameManager.instance.Pi;
         actShoot = _pi.actions["Attack"];
     }
 
