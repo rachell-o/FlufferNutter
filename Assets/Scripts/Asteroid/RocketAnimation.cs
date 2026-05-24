@@ -11,7 +11,8 @@ public class RocketAnimation : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _pi = GetComponent<PlayerInput>();
+        // _pi = GetComponent<PlayerInput>();
+        _pi = GameManager.instance.Pi;
         animator = GetComponent<Animator>();
         actMove = _pi.actions["Move"];
     }
