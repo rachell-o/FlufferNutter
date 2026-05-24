@@ -33,7 +33,7 @@ MonoBehaviour:
     charac: Zombie
     won: 1
     isActualScore: 1
-  - name: Test
+  - name: Adorable Monk
     charac: Alien
     won: 1
     isActualScore: 1
