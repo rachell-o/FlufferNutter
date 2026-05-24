@@ -12,29 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282116f571bbf914f9f3f34d936ac8ff, type: 3}
   m_Name: DonneeClassement
   m_EditorClassIdentifier: Assembly-CSharp::SOScore
-  _lesDonneesTableau:
-  - name: Test
-    charac: Alien
-    won: 0
-    isActualScore: 1
-  - name: Test
-    charac: Alien
-    won: 0
-    isActualScore: 1
-  - name: Test
-    charac: Alien
-    won: 0
-    isActualScore: 1
-  - name: Miraculous Kyle
-    charac: Zombie
-    won: 0
-    isActualScore: 1
-  - name: Super Destroyer
-    charac: Zombie
-    won: 1
-    isActualScore: 1
-  - name: Adorable Monk
-    charac: Alien
-    won: 1
-    isActualScore: 1
+  _lesDonneesTableau: []
   _fichier: score.json
