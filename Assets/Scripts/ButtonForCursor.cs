@@ -27,4 +27,14 @@ public class ButtonForCursor : MonoBehaviour
         Debug.Log("Je suis Triggered!");
         _even.Invoke();
     }
+
+    public void ExitGame()
+    {
+        Debug.Log("Exit Game button pressed!");
+        Application.Quit();
+
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
 }
