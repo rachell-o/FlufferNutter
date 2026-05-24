@@ -12,11 +12,25 @@ public class FoodGameManager : MonoBehaviour
     [SerializeField] private GameObject skillet;
     //[SerializeField] private GameObject cursorHandPrefab;
     //[SerializeField] private Transform cursorSpawnPoint;
+    [SerializeField] private GameObject instructionPanel;
 
+    private bool gameStarted = false;
     private bool gameEnded = false;
 
     void Update()
     {
+        if (!gameStarted)
+        return;
+
+        // if (waitingForContinue)
+        // {
+        //     if (_continueAction.triggered)
+        //     {
+        //         LoadMainMenu();
+        //     }
+        //     return;
+        // }
+        
         if (gameEnded)
             return;
 
@@ -34,6 +48,15 @@ public class FoodGameManager : MonoBehaviour
     void UpdateTimerUI()
     {
         timerText.text = "Time: " + Mathf.CeilToInt(gameTime);
+    }
+
+    public void StartGame()
+    {
+        gameStarted = true;
+
+        instructionPanel.SetActive(false);
+
+        FindAnyObjectByType<FoodSpawner>()?.StartSpawning();
     }
 
     void EndGame()

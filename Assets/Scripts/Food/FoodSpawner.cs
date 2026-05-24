@@ -13,6 +13,7 @@ public class FoodSpawner : MonoBehaviour
     private Camera cam;
     private float timer;
     private bool gameEnded = false;
+    private bool canSpawn = false;
 
     void Start()
     {
@@ -21,6 +22,9 @@ public class FoodSpawner : MonoBehaviour
 
     void Update()
     {
+        if (!canSpawn)
+        return;
+        
         if (gameEnded)
         return;
         
@@ -59,6 +63,11 @@ public class FoodSpawner : MonoBehaviour
             sr.sprite = goodSprites[Random.Range(0, goodSprites.Length)];
         else
             sr.sprite = badSprites[Random.Range(0, badSprites.Length)];
+    }
+
+    public void StartSpawning()
+    {
+        canSpawn = true;
     }
 
     public void StopSpawning()
