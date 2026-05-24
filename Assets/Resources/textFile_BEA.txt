@@ -1,1 +1,2 @@
 "You insult the Aliens with your lack of skill and they abduct you and leave you stranded in space forever..."
+LeaderBoard(1,1)

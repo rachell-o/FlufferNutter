@@ -1,1 +1,2 @@
 "You and Xanthg the Alien get married and rule the world together by abducting the rebellious mobs with UFOs. Everyone else fears you as their one and supreme leader."
+LeaderBoard(1,1)

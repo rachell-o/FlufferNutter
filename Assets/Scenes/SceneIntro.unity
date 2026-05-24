@@ -766,7 +766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64ca85ad60f93f45bcd2f84ef86fdcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonForCursor
-  _clicSound: {fileID: 8300000, guid: 99462402053ff9445824dbc415b9a875, type: 3}
   _even:
     m_PersistentCalls:
       m_Calls:
@@ -1175,10 +1174,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64ca85ad60f93f45bcd2f84ef86fdcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonForCursor
-  _clicSound: {fileID: 8300000, guid: 99462402053ff9445824dbc415b9a875, type: 3}
   _even:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
+        m_TargetAssemblyTypeName: SONavigation, Assembly-CSharp
+        m_MethodName: GetSceneByName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SceneZ1
+          m_BoolArgument: 0
+        m_CallState: 2
   _highlightedSprite: {fileID: 0}
 --- !u!1 &986630010
 GameObject:
@@ -1614,20 +1624,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64ca85ad60f93f45bcd2f84ef86fdcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonForCursor
-  _clicSound: {fileID: 8300000, guid: 99462402053ff9445824dbc415b9a875, type: 3}
   _even:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+        m_TargetAssemblyTypeName: SONavigation, Assembly-CSharp
+        m_MethodName: GetSceneByName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: SceneA1
           m_BoolArgument: 0
         m_CallState: 2
   _highlightedSprite: {fileID: 0}
@@ -2022,10 +2031,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64ca85ad60f93f45bcd2f84ef86fdcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonForCursor
-  _clicSound: {fileID: 8300000, guid: 99462402053ff9445824dbc415b9a875, type: 3}
   _even:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
+        m_TargetAssemblyTypeName: SONavigation, Assembly-CSharp
+        m_MethodName: GetSceneByName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SceneR1
+          m_BoolArgument: 0
+        m_CallState: 2
   _highlightedSprite: {fileID: 0}
 --- !u!1 &1391644574
 GameObject:
@@ -2496,6 +2516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f252f93ab383c49be28fd03c1228eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  _nav: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
 --- !u!1 &1739971280
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d6d88162d39e7d44db6929e2062343e0
+  - enabled: 1
+    path: Assets/Scenes/SceneIntro.unity
+    guid: 15e745e58a23a7d41ba50b74d79d599c
+  - enabled: 1
+    path: Assets/Scenes/SceneA1.unity
+    guid: 1e28cb8cbe492134791713e0f7ff12b7
+  - enabled: 1
+    path: Assets/Scenes/SceneGEA.unity
+    guid: 39071503864c6d245bcdaccd30d85950
+  - enabled: 1
+    path: Assets/Scenes/SceneBEA.unity
+    guid: 166929bd120a50a40883710ee81edeee
+  - enabled: 1
+    path: Assets/Scenes/SceneZ1.unity
+    guid: 2d451f986b22be84c9739c3c1ad55d40
+  - enabled: 1
     path: Assets/Scenes/FoodGame.unity
     guid: b8cc64edde3650444bb38dc63e1480f7
   - enabled: 1
