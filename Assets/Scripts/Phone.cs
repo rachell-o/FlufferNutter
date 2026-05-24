@@ -3,10 +3,15 @@ using UnityEngine;
 
 public class Phone : MonoBehaviour
 {
+    [SerializeField] GameObject[] _chara;
     private Animator _anim;
     public Testing_Architect test_archRef;
     void Start()
     {
+        foreach (GameObject chara in _chara)
+        {
+            chara.SetActive(false);
+        }
         _anim = GetComponent<Animator>();
     }
 
@@ -15,6 +20,17 @@ public class Phone : MonoBehaviour
         if (num == 0)
         {
             _anim.SetTrigger("OpeningPhone");
+        }
+        else if (num == 1) _anim.SetTrigger("ShowA");
+        else if (num == 2) _anim.SetTrigger("ShowR");
+        else if (num == 3) _anim.SetTrigger("ShowZ");
+        else if (num == 4)
+        {
+            foreach (GameObject chara in _chara)
+            {
+                chara.SetActive(true);
+            }
+            gameObject.SetActive(false);
         }
     }
 

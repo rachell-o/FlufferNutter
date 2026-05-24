@@ -10,13 +10,8 @@ Anim(0,0)
 "In this era, it has become the norm to meet people through the internet since most of us have become shut-ins (including you)."
 "Anyway."
 "If you want to obtain the power to conquer the planet, you must successfully woo one of the most three powerful entities in the galaxy:"
-"Xanthg of the Aliens"
-"Carl  of the Zombies"
-"Hal of the Robots"
+"Xanthg of the Aliens"Anim(1,0)
+"Hal of the Robots"Anim(2,0)
+"Carl  of the Zombies"Anim(3,0)
 "Look who you matched with! Say something to charm them… don’t fumble this one!"
-
-Move(z,1)
-Joe"MMMMMMMMMMMMMMMMM BEEP BEEP BEEP BEEP"
-Bill"I love candles"Jump(z,2)
-Joe"Chikibawawa"
-Joe"Wow!"Spin(z,2)
+Anim(4,0)

@@ -14,7 +14,7 @@ namespace TESTING
         public List<DIALOGUE_LINE> DlList => _dlList;
         int _textFileCounter = 0;
         string _textFileName = "textFile_";
-        void Start()
+        void Awake()
         {
             SendFilesToParse();
         }
