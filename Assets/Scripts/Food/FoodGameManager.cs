@@ -9,6 +9,7 @@ public class FoodGameManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private GameObject endScreen;
     [SerializeField] private TMP_Text finalScoreText;
+    [SerializeField] private TMP_Text endingMessageText;
     
     [SerializeField] private GameObject skillet;
     [SerializeField] private GameObject cursorHand;
@@ -94,10 +95,12 @@ public class FoodGameManager : MonoBehaviour
         if (finalScore > 0)
         {
             nextSceneName = "SceneGEZ";
+            endingMessageText.text = "You caught yummy food! <3";
         }
         else
         {
             nextSceneName = "SceneBEZ";
+            endingMessageText.text = "You caught gross food! Yuck!";
         }
         finalScoreText.text = "Final Score: " + finalScore;
     }
