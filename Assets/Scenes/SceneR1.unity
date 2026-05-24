@@ -1633,7 +1633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Name
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: acf9a2efa33f9b748937e295eadc1e56, type: 2}
   m_sharedMaterial: {fileID: -6775385923177529589, guid: acf9a2efa33f9b748937e295eadc1e56, type: 2}
@@ -1788,6 +1788,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f252f93ab383c49be28fd03c1228eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  _nav: {fileID: 0}
+  Player_name: Test
+  Love_Interest: Alien
+  Won_The_MiniGame: 0
 --- !u!1 &1739971280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,7 +2117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text
+  m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: acf9a2efa33f9b748937e295eadc1e56, type: 2}
   m_sharedMaterial: {fileID: -6775385923177529589, guid: acf9a2efa33f9b748937e295eadc1e56, type: 2}
