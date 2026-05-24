@@ -11,6 +11,7 @@ public class NextWire : MonoBehaviour
         nextPath.SetActive(true);
 
         parent = this.transform.root.gameObject;
+        cursor.GetComponent<Rigidbody2D>().angularVelocity = 0;
         cursor.transform.position = nextStart.position;
         Destroy(parent);
     }

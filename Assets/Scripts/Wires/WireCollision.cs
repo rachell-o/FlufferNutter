@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class WireCollision : MonoBehaviour
 {
     EdgeCollider2D col;
+    [SerializeField] GameObject start;
+
     void Awake()
     {
         col = GetComponent<EdgeCollider2D>();
@@ -11,6 +13,6 @@ public class WireCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("SceneBER");
+        collision.gameObject.transform.position = start.transform.position;
     }
 }
