@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public PlayerInput Pi => _pi;
     private Camera _camera;
     public Camera Camera => _camera;
+    public string Player_name = "Test";
+    public string Love_Interest = "Alien";
+    public bool Won_The_MiniGame = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()

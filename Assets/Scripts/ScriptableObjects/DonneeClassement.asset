@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282116f571bbf914f9f3f34d936ac8ff, type: 3}
   m_Name: DonneeClassement
   m_EditorClassIdentifier: Assembly-CSharp::SOScore
-  _fichier: score.tim
+  _lesDonneesTableau:
+  - name: Test
+    charac: Alien
+    won: 0
+    isActualScore: 1
+  _fichier: score.json
