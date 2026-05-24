@@ -1,2 +1,2 @@
-"The Robots take over every electronic device in the world and use it to overtake the humans. Everyone bows down to you."
+"The Robots take over every electronic device in the world and use it to overtake the humans. Everyone bows down to you." Bool(a,1)
 LeaderBoard(1,1)

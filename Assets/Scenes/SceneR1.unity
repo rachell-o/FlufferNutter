@@ -795,7 +795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -20, y: -70.70999}
+  m_AnchoredPosition: {x: -20, y: -70.70996}
   m_SizeDelta: {x: 1920, y: 1200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1042610289
@@ -1788,7 +1788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f252f93ab383c49be28fd03c1228eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  _nav: {fileID: 0}
+  _nav: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
   Player_name: Test
   Love_Interest: Alien
   Won_The_MiniGame: 0

@@ -1,2 +1,2 @@
-"You become the zombies’ personal chef and in exchange they infect the entire world to change into zombies that obey your every command."
+"You become the zombies’ personal chef and in exchange they infect the entire world to change into zombies that obey your every command." Bool(a,1)
 LeaderBoard(1,1)

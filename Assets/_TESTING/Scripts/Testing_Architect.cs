@@ -130,14 +130,7 @@ namespace TESTING
                             }
                         }
                     }
-                    else if (match.Success && theLines[_lineCounter].commands.Contains("ChangeSprite"))
-                    {
-
-                    }
-                    else if (match.Success && theLines[_lineCounter].commands.Contains("ChangeBG"))
-                    {
-
-                    }
+                    else if (match.Success && theLines[_lineCounter].commands.Contains("Bool")) GameManager.instance.Won_The_MiniGame = true;
                     else if (match.Success && theLines[_lineCounter].commands.Contains("LeaderBoard"))
                     {
                         GameManager.instance.Nav.GetSceneByName("SceneLeaderboard");
