@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         if (!BecomeSingleton()) return;
+        Player_name = "Test";
+        Love_Interest = "Alien";
+        Won_The_MiniGame = false;
         _pi = GetComponent<PlayerInput>();
         FindNewCamera();
     }

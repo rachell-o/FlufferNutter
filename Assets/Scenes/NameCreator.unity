@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 172693602}
   - component: {fileID: 172693601}
   - component: {fileID: 172693603}
+  - component: {fileID: 172693604}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -269,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 0.392}
+  m_Color: {r: 0.22069702, g: 0.11258094, b: 0.22264141, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -312,7 +313,7 @@ MonoBehaviour:
     m_Top: 40
     m_Bottom: 40
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: -100
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -320,6 +321,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &172693604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172693599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 884d3eaec653be546b39ece3d148bea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NameCreator
+  _nameText: {fileID: 910199876}
 --- !u!1 &201453578
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +486,7 @@ GameObject:
   - component: {fileID: 474439435}
   - component: {fileID: 474439434}
   m_Layer: 6
-  m_Name: StartBtn (1)
+  m_Name: AgainBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -488,8 +502,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -225, y: -365, z: -11.776969}
-  m_LocalScale: {x: 10.688001, y: 10.314987, z: 83.77643}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 10, y: 12.75, z: 10}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1317156893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -505,8 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627614d3f51c9b74a9f551e19c53fa49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  source: {fileID: 0}
-  clickClip: {fileID: 0}
+  source: {fileID: 474439435}
+  clickClip: {fileID: 8300000, guid: 99462402053ff9445824dbc415b9a875, type: 3}
 --- !u!82 &474439435
 AudioSource:
   m_ObjectHideFlags: 0
@@ -623,8 +637,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.686106, y: 2.1200001, z: 0.20000196}
-  m_Center: {x: -0.10617898, y: 0, z: 0}
+  m_Size: {x: 16.1, y: 11.84, z: 3.6}
+  m_Center: {x: -0.5195451, y: -0.12913992, z: 0}
 --- !u!114 &474439437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,18 +654,6 @@ MonoBehaviour:
   _even:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
-        m_TargetAssemblyTypeName: SONavigation, Assembly-CSharp
-        m_MethodName: GoNextScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SceneIntro
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 474439435}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -664,7 +666,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _highlightedSprite: {fileID: 1862893733, guid: d4f32d397cbe35d4ba72c155d2a0e316, type: 3}
+      - m_Target: {fileID: 172693604}
+        m_TargetAssemblyTypeName: NameCreator, Assembly-CSharp
+        m_MethodName: GenerateRandomName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _highlightedSprite: {fileID: 0}
 --- !u!212 &474439438
 SpriteRenderer:
   serializedVersion: 2
@@ -714,12 +728,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -1474678932, guid: 991942d36c051664e846517a49ff699a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 33, y: 16}
+  m_Size: {x: 15, y: 11.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1265,7 +1279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.0679245, g: 0.0679245, b: 0.0679245, a: 1}
+  m_Color: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1305,7 +1319,7 @@ GameObject:
   - component: {fileID: 1215678238}
   - component: {fileID: 1215678237}
   m_Layer: 6
-  m_Name: BtnAgain
+  m_Name: StartBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1320,7 +1334,7 @@ Transform:
   m_GameObject: {fileID: 1215678232}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 244, y: -371, z: -11.776969}
+  m_LocalPosition: {x: 216, y: -371, z: -11.776969}
   m_LocalScale: {x: 66.8, y: 64.46867, z: 83.77643}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1362,16 +1376,16 @@ MonoBehaviour:
   _even:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
-        m_TargetAssemblyTypeName: SONavigation, Assembly-CSharp
-        m_MethodName: GoNextScene
+      - m_Target: {fileID: 172693604}
+        m_TargetAssemblyTypeName: NameCreator, Assembly-CSharp
+        m_MethodName: SaveName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SceneIntro
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1215678238}
@@ -1384,6 +1398,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
+        m_TargetAssemblyTypeName: SONavigation, Assembly-CSharp
+        m_MethodName: GoNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SceneIntro
           m_BoolArgument: 0
         m_CallState: 2
   _highlightedSprite: {fileID: 1862893733, guid: d4f32d397cbe35d4ba72c155d2a0e316, type: 3}
@@ -1458,8 +1484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627614d3f51c9b74a9f551e19c53fa49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  source: {fileID: 0}
-  clickClip: {fileID: 0}
+  source: {fileID: 1215678238}
+  clickClip: {fileID: 8300000, guid: 99462402053ff9445824dbc415b9a875, type: 3}
 --- !u!82 &1215678238
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1827,6 +1853,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _nav: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
+  Player_name: Test
+  Love_Interest: Alien
+  Won_The_MiniGame: 0
 --- !u!4 &1517087523
 Transform:
   m_ObjectHideFlags: 0

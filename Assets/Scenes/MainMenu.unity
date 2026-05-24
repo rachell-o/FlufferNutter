@@ -2712,7 +2712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1286246729
 Transform:
   m_ObjectHideFlags: 0
@@ -3813,6 +3813,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _nav: {fileID: 11400000, guid: 7c02d0ef663335149a7a341799d1025c, type: 2}
+  Player_name: Test
+  Love_Interest: Alien
+  Won_The_MiniGame: 0
 --- !u!4 &1517087523
 Transform:
   m_ObjectHideFlags: 0
