@@ -8,6 +8,10 @@ public class FoodGameManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private GameObject endScreen;
     [SerializeField] private TMP_Text finalScoreText;
+    
+    [SerializeField] private GameObject skillet;
+    //[SerializeField] private GameObject cursorHandPrefab;
+    //[SerializeField] private Transform cursorSpawnPoint;
 
     private bool gameEnded = false;
 
@@ -36,10 +40,23 @@ public class FoodGameManager : MonoBehaviour
     {
         gameEnded = true;
 
-        Debug.Log("GAME OVER");
+        FindAnyObjectByType<FoodSpawner>()?.StopSpawning();
 
-        Time.timeScale = 0f;
-        
+        FoodFall[] foods = FindObjectsByType<FoodFall>();
+
+        foreach (FoodFall food in foods)
+        {
+            Destroy(food.gameObject);
+        }
+
+        Destroy(skillet);
+
+        //Instantiate(
+        //    cursorHandPrefab,
+        //    cursorSpawnPoint.position,
+        //    Quaternion.identity
+        //);
+
         endScreen.SetActive(true);
 
         finalScoreText.text =
@@ -48,7 +65,7 @@ public class FoodGameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
 
         SceneManager.LoadScene("MainMenu");
     }

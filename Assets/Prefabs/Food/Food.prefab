@@ -198,3 +198,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f65f2f392c756a4ab2aa89f4a030b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodCollision
+  isGood: 0
+  explosionPrefab: {fileID: 9095453728254904840, guid: 0f4df9f93a4a9804cb4d8cc58db3cddb, type: 3}

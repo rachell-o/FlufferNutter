@@ -10,9 +10,9 @@ public class FoodSpawner : MonoBehaviour
 
     [SerializeField] private float spawnInterval = 0.5f;
 
-
     private Camera cam;
     private float timer;
+    private bool gameEnded = false;
 
     void Start()
     {
@@ -21,6 +21,9 @@ public class FoodSpawner : MonoBehaviour
 
     void Update()
     {
+        if (gameEnded)
+        return;
+        
         timer += Time.deltaTime;
 
         if (timer >= spawnInterval)
@@ -56,5 +59,10 @@ public class FoodSpawner : MonoBehaviour
             sr.sprite = goodSprites[Random.Range(0, goodSprites.Length)];
         else
             sr.sprite = badSprites[Random.Range(0, badSprites.Length)];
+    }
+
+    public void StopSpawning()
+    {
+        gameEnded = true;
     }
 }
