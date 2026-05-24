@@ -26,7 +26,7 @@ public class SoundManager : MonoBehaviour
             return false; //échec!
         }
         _instance = this;
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
         return true; //succès!
     }
 
