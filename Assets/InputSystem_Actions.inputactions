@@ -320,6 +320,17 @@
                 },
                 {
                     "name": "",
+                    "id": "68765b64-b274-49d6-b2d2-407e1186f507",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e3ceb58f-0638-470b-bcf7-7414de538435",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",

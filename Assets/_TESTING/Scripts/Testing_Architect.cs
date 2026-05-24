@@ -152,14 +152,17 @@ namespace TESTING
                 string sceneName = SceneManager.GetActiveScene().name;
                 if (sceneName.Contains("A1"))
                 {
+                    GameManager.instance.Love_Interest = "Alien";
                     GameManager.instance.Nav.GoNextScene();
                 }
                 else if (sceneName.Contains("Z1"))
                 {
+                    GameManager.instance.Love_Interest = "Zombie";
                     GameManager.instance.Nav.GoNextScene();
                 }
                 else if (sceneName.Contains("R1"))
                 {
+                    GameManager.instance.Love_Interest = "Robot";
                    GameManager.instance.Nav.GoNextScene();
                 }
             }

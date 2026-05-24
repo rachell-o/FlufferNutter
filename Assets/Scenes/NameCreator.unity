@@ -391,7 +391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Votre titre de dictateur est :'
+  m_text: 'The name of your dictator is :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d155f566059ef084184475e2f134f769, type: 2}
   m_sharedMaterial: {fileID: 4203127697868117908, guid: d155f566059ef084184475e2f134f769, type: 2}

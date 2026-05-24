@@ -12,12 +12,13 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D _col;
 
     [SerializeField] private float MAX_SPEED = 10f;
-    [SerializeField] private float DEFAULT_SPEED = 5f   ;
+    [SerializeField] private float DEFAULT_SPEED = 5f;
     [SerializeField] private float SLOW_STOP_SPEED = 1f;
 
     void Awake()
     {
-        _pi = GetComponentInParent<PlayerInput>();
+        // _pi = GetComponent<PlayerInput>();
+        _pi = GameManager.instance.Pi;
         _rb = GetComponent<Rigidbody2D>();
         //_sr = GetComponent<SpriteRenderer>();
         _col = GetComponent<Collider2D>();
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
             // _rb.MovePosition(_movement.normalized * 1f);
             // _rb.linearVelocity = _movement.normalized * 1f;
             // gameObject.transform.Translate(_movement * 8f * Time.deltaTime);
-            if(_rb.linearVelocity.magnitude > MAX_SPEED)
+            if (_rb.linearVelocity.magnitude > MAX_SPEED)
             {
                 _rb.linearVelocity = _rb.linearVelocity.normalized * MAX_SPEED;
             }
@@ -49,10 +50,10 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.AddForce(_rb.linearVelocity * -SLOW_STOP_SPEED, ForceMode2D.Force);
         }
-        
+
         ClampToScreen();
     }
-    
+
     void ClampToScreen()
     {
         Camera cam = Camera.main;

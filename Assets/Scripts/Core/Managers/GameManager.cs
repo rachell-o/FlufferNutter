@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
             return false; //échec!
         }
         _instance = this;
+        DontDestroyOnLoad(gameObject);
         return true; //succès!
     }
 }
