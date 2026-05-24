@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4281437801316875670}
   - component: {fileID: 2158075268115825369}
   - component: {fileID: 6114331613138106485}
+  - component: {fileID: 5071767974037779345}
   m_Layer: 6
   m_Name: Bullet
   m_TagString: Bullet
@@ -180,3 +181,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletMovement
   speed: 10
+--- !u!114 &5071767974037779345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428987804529469639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea3c6f76dbddaa439c5d0c6208d4a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimedDestruct
+  delay: 2
