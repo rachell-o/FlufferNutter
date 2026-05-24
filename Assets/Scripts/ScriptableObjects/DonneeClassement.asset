@@ -37,4 +37,8 @@ MonoBehaviour:
     charac: Alien
     won: 1
     isActualScore: 1
+  - name: Cute Jenna
+    charac: Alien
+    won: 1
+    isActualScore: 1
   _fichier: score.json

@@ -8,8 +8,15 @@ public class NextWire : MonoBehaviour
     GameObject parent;
 
     [SerializeField] TimerManager timer;
+
+    [SerializeField] AudioClip success;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        AudioSource.PlayClipAtPoint(
+                success,
+                Camera.main.transform.position,
+                1.0f
+            );
         nextPath.SetActive(true);
         timer.RestartTimer();
         parent = this.transform.root.gameObject;
